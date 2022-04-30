@@ -5,6 +5,7 @@ let d = [1,2,3,4]
 let e = "Nome"
 
 console.log("Esses são os exercicios da aula 3")
+
 //1
 if (a == 10) {
     console.log("A");
