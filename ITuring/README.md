@@ -1,4 +1,4 @@
-# README.txt
+# README.md
 
 ## Texto de teste para ReadMe usando markdown
 
