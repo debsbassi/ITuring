@@ -106,18 +106,26 @@ let receita = [
 //console.log("O valor é", receita[2].valor, " e a gorjeta é ", receita[2].gorjeta)
 
 //Exercício 1: Qual o valor total de vendas sem gorjeta?
-const totalvenda = receita.reduce((resultado, quantidade) => {
-    return (resultado + quantidade.valor);
-}, 0)
+// const totalvenda = receita.reduce((resultado, quantidade) => {
+//     return (resultado + quantidade.valor);
+// }, 0)
+// console.log("O valor total de vendas sem gorjeta é ", totalvenda)
+let totalvenda = 0
+for (item of receita) {
+    (totalvenda = item.valor + totalvenda)
+}
 console.log("O valor total de vendas sem gorjeta é ", totalvenda)
 
-
 //Exercício 2: Qual o valor total de vendas incluindo a gorjeta?
-const totalgorjeta = receita.reduce((resultado, quantidade) => {
-    return (resultado + quantidade.gorjeta);
-}, 0)
-console.log("O valor total de vendas com gorjeta é ", (totalvenda+totalgorjeta))
-
+// const totalgorjeta = receita.reduce((resultado, quantidade) => {
+//     return (resultado + quantidade.gorjeta);
+// }, 0)
+// console.log("O valor total de vendas com gorjeta é ", (totalvenda+totalgorjeta))
+let totalgorjeta = 0
+for (item of receita) {
+    (totalgorjeta = item.gorjeta + totalgorjeta)
+}
+console.log("O valor total de vendas com gorjeta é ", (totalvenda + totalgorjeta))
 
 //Exercício 3: Quantas vendas foram abaixo de 50 reais?
 let quantidade = 0
